@@ -1,11 +1,15 @@
 import React from "react";
 import "../style/ProductList.css";
+import p1 from "../assets/images/p9.jpg";
+import p2 from "../assets/images/p2.jpg";
+import p3 from "../assets/images/p3.jpg";
+import p4 from "../assets/images/p7.jpg";
 
 const products = [
-  { id: 1, name: "Pink Flower", price: "$5", img: "https://via.placeholder.com/150" },
-  { id: 2, name: "Purple Flower", price: "$6", img: "https://via.placeholder.com/150" },
-  { id: 3, name: "Yellow Flower", price: "$4", img: "https://via.placeholder.com/150" },
-  { id: 4, name: "Mixed Bouquet", price: "$12", img: "https://via.placeholder.com/150" },
+  { id: 1, name: "Pink Flower", price: "Rs.200", img: p1 },
+  { id: 2, name: "Purple Flower", price: "Rs.150", img: p2 },
+  { id: 3, name: "Yellow Flower", price: "Rs.100", img: p3 },
+  { id: 4, name: "Mixed Bouquet", price: "Rs.300", img: p4 },
 ];
 
 const ProductList = () => {
