@@ -6,9 +6,9 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>Fluffy Petals 🌸</h1>
       <ul>
-        <li>Home</li>
-        <li>Products</li>
-        <li>Contact</li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   );

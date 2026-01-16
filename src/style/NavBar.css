@@ -8,11 +8,37 @@
 }
 
 .navbar ul {
-  display: flex;
   list-style: none;
-  gap: 1.5rem;
+  display: flex;
+  gap: 30px;
 }
 
-.navbar li {
-  cursor: pointer;
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover color */
+.navbar ul li a:hover {
+  color: #e91e63;
+}
+
+/* Animated underline */
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background-color: #e91e63;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
 }
