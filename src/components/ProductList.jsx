@@ -10,6 +10,10 @@ const products = [
   { id: 2, name: "Purple Flower", price: "Rs.150", img: p2 },
   { id: 3, name: "Yellow Flower", price: "Rs.100", img: p3 },
   { id: 4, name: "Mixed Bouquet", price: "Rs.300", img: p4 },
+  { id: 5, name: "Red Rose", price: "Rs.250", img: p1 },
+  { id: 6, name: "White Lily", price: "Rs.180", img: p2 },
+  { id: 7, name: "Sunflower", price: "Rs.220", img: p3 },
+  { id: 8, name: "Orchid", price: "Rs.350", img: p4 },
 ];
 
 const ProductList = () => {
