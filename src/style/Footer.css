@@ -1,7 +1,23 @@
-footer{
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #6c757d;
+footer {
+  background-color: #f8f9fa;
+  padding: clamp(16px, 3vw, 28px);
+  text-align: center;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  color: #6c757d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer text */
+footer p {
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  footer {
+    font-size: 0.95rem;
+  }
 }

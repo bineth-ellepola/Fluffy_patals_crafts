@@ -1,30 +1,63 @@
+/* ===============================
+   Hero Section
+================================ */
 .hero {
+  min-height: 70vh;
   text-align: center;
-  padding: 4rem 2rem;
-  background-color: #FFF5F8; /* soft background */
+  padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 2rem);
+  background-color: #FFF5F8;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* ===============================
+   Hero Heading
+================================ */
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
   margin-bottom: 1rem;
-  color: #E9689A; /* primary color */
+  color: #E9689A;
 }
 
+/* ===============================
+   Hero Text
+================================ */
 .hero p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  max-width: 600px;
   margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
+/* ===============================
+   Hero Button
+================================ */
 .hero button {
-  background-color: #A958C8; /* secondary color */
+  background-color: #A958C8;
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 8px;
+  padding: 0.9rem clamp(1.8rem, 4vw, 2.4rem);
+  border-radius: 10px;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
   cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
+/* Hover effect */
 .hero button:hover {
   background-color: #7b3fa0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   Mobile Optimization
+================================ */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+  }
 }

@@ -1,3 +1,6 @@
+/* ===============================
+   Global Variables
+================================ */
 :root {
   --primary: #E9689A;
   --secondary: #A958C8;
@@ -5,31 +8,65 @@
   --leaf: #61C487;
 }
 
-/* Section */
+/* ===============================
+   Reset & Base
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===============================
+   Full Page Contact Section
+================================ */
 .contact {
-  padding: 60px 20px;
+  min-height: 100vh;
+  padding: clamp(40px, 5vw, 80px) 16px;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-/* Heading */
+/* ===============================
+   Heading
+================================ */
 .contact h3 {
   color: white;
-  font-size: 2rem;
-  margin-bottom: 25px;
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  margin-bottom: 40px;
   letter-spacing: 1px;
 }
 
-/* Form box */
+/* ===============================
+   Main Container
+================================ */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 40px);
+  width: 100%;
+  max-width: 1100px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* ===============================
+   Contact Form Card
+================================ */
 .contact-form {
   background: white;
-  padding: 30px;
+  padding: clamp(20px, 4vw, 30px);
   width: 100%;
   max-width: 420px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
 }
@@ -44,11 +81,11 @@
 /* Inputs & textarea */
 .contact-form input,
 .contact-form textarea {
-  padding: 10px 12px;
+  padding: 12px 14px;
   margin-bottom: 18px;
   border-radius: 8px;
   border: 2px solid #eee;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
   transition: border 0.3s, box-shadow 0.3s;
 }
 
@@ -57,17 +94,18 @@
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(233, 104, 154, 0.2);
+  box-shadow: 0 0 0 3px rgba(233, 104, 154, 0.25);
 }
 
 /* Textarea */
 .contact-form textarea {
   resize: none;
-  min-height: 120px;
+  min-height: 130px;
 }
 
-/* Button */
+/* Submit Button */
 .contact-form button {
+  min-height: 48px;
   padding: 12px;
   background: var(--leaf);
   color: white;
@@ -79,7 +117,7 @@
   transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
 }
 
-/* Button hover */
+/* Button Hover */
 .contact-form button:hover {
   background: var(--accent);
   color: #333;
@@ -87,46 +125,29 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-  .contact h3 {
-    font-size: 1.6rem;
-  }
-
-  .contact-form {
-    padding: 20px;
-  }
-}
-/* Container for form + social */
-.contact-container {
-  display: flex;
-  gap: 40px;
-  width: 100%;
-  max-width: 900px;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-/* Social section */
+/* ===============================
+   Social Section
+================================ */
 .contact-social {
   background: white;
-  padding: 30px;
+  padding: clamp(20px, 4vw, 30px);
   width: 100%;
-  max-width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 320px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .contact-social h4 {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   color: var(--secondary);
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
   text-align: center;
 }
 
-/* Social buttons */
+/* Social Buttons */
 .social {
   display: block;
+  min-height: 48px;
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 8px;
@@ -142,7 +163,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Platform colors */
+/* Platform Colors */
 .whatsapp {
   background: #25d366;
 }
@@ -161,14 +182,11 @@
   );
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-social {
-    max-width: 420px;
+/* ===============================
+   Mobile Tweaks
+================================ */
+@media (max-width: 600px) {
+  .contact h3 {
+    margin-bottom: 25px;
   }
 }

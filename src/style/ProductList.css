@@ -1,41 +1,64 @@
+/* ===============================
+   Product Section
+================================ */
 .product-list {
-  padding: 2rem;
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
   text-align: center;
 }
 
+/* Section title */
 .product-list h3 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
   color: #E9689A;
 }
 
+/* ===============================
+   Product Grid
+================================ */
 .products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: clamp(1.2rem, 4vw, 2rem);
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
+/* ===============================
+   Product Card
+================================ */
 .product-card {
   background-color: #FFF5F8;
   padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  width: 150px;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Hover effect */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+/* Product image */
 .product-card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
 }
 
+/* Product name */
 .product-card h4 {
-  font-size: 1rem;
-  margin: 0.5rem 0;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  margin: 0.6rem 0;
 }
 
+/* Product price */
 .product-card p {
   font-weight: bold;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   color: #A958C8;
 }
