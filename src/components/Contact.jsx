@@ -1,5 +1,5 @@
 import "../style/Contact.css";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
 
